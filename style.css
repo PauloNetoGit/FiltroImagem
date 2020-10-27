@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 60%;
+    height: auto;
+    margin: 100px auto;
+}
+
+#galeria img {
+    float: left;
+    width: 180px;
+    padding: 5px;
+    transition: all .4s;
+}
+
+input {
+    display: none;
+}
+
+#bt_tech:checked ~ #galeria .animais,
+#bt_tech:checked ~ #galeria .musica {
+    opacity: .4;
+    transform: scale(0.8);
+}
+
+#bt_animais:checked ~ #galeria .tech,
+#bt_animais:checked ~ #galeria .musica {
+    opacity: .4;
+    transform: scale(0.8);
+}
+
+#bt_musica:checked ~ #galeria .tech,
+#bt_musica:checked ~ #galeria .animais{
+    opacity: .4;
+    transform: scale(0.8);
+}
+
+section label {
+    width: 145px;
+    padding: 20px;
+    display: block;
+    float: left;
+    background-color: #00b7ff;
+    color: white;
+    font-family:  Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    margin: 2.2px;
+    font-weight: bold;
+}
+
+input:checked+label {
+    background-color: #ff00aa;
+    font-weight: bold;
+}
